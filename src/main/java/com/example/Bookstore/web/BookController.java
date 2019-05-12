@@ -1,15 +1,16 @@
 package com.example.Bookstore.web;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+@ResponseBody
 public class BookController {
 
 		@GetMapping("/")
-		public String whereDoIGo(Model model) {
-			return "index";
+		public String index() {
+			return "this is the index";
 		}
 		
 	
