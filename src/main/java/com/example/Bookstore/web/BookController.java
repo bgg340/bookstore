@@ -40,4 +40,18 @@ public class BookController {
 			return "redirect:../booklist";
 		}
 		
+		//WIP
+		@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+		public String editBook(@PathVariable("id") long bookId, Model model) {
+
+			//??
+			
+			return "editbook";
+		}
+		
+		@RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
+		public String updateBook(@PathVariable("id") long bookId, Model model) {
+			// book.setId(bookId);
+			return "redirect:../booklist";
+		}
 }
