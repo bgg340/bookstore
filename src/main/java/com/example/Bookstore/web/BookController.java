@@ -54,7 +54,7 @@ public class BookController {
 		public String editBook(@PathVariable("id") long bookId, Model model) {
 
 			model.addAttribute("book", repository.findById(bookId));
-			
+			model.addAttribute("categories", crepository.findAll());
 			return "editbook";
 		}
 		
@@ -84,5 +84,9 @@ public class BookController {
 			return bookname + " deleted";
 		}
 		
+		 @RequestMapping(value="/login")
+		  public String login() {
+		    return "login";
+		  }
 		
 }
